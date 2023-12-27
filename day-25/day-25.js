@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-function main(file) {
-    const content = fs.readFileSync(file, 'utf8');
+const process = () => {
+    const content = fs.readFileSync('min-input.txt', 'utf8');
     const lines = content.split('\n');
 
     const componentsMap = new Map();
@@ -96,6 +96,4 @@ function main(file) {
     console.log('day 25:', firstGroup * secondGroup);
 }
 
-if (require.main === module) {
-    main('input.txt');
-}
+process();
