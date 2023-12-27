@@ -19,15 +19,13 @@ const replaceWordDigits = (str) => {
         newStr = newStr.replaceAll(word, wordToDigit[word]);
     }
 
-    console.log(newStr);
-
     return newStr;
 };
 
 const getNumber = (line) => {
     let str = line;
 
-    // Replace words with their numeric values
+    // Replace words with their numeric values (for part 2)
     str = replaceWordDigits(str);
 
     const digits = str.match(/\d/g);
@@ -43,18 +41,12 @@ const getNumber = (line) => {
 
 async function process() {
     const fileContent = fs.readFileSync(__dirname + '/input.txt', 'utf-8');
-
     const lines = fileContent.split('\n');
 
     let sum = 0;
 
     for (const line of lines) {
-        console.log(line);
-
         const number = getNumber(line);
-
-        console.log(number);
-
         sum += number;
     }
 
