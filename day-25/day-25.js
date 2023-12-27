@@ -8,20 +8,21 @@ const process = () => {
 
     // mapping components to components
     for (let line of lines) {
-        let [l, r] = line.trim().split(': ');
-        r = r.split(' ');
-        for (let comp of r) {
-            if (!componentsMap.has(l)) {
-                componentsMap.set(l, new Set());
+        let [left, right] = line.trim().split(': ');
+        right = right.split(' ');
+
+        for (let component of right) {
+            if (!componentsMap.has(left)) {
+                componentsMap.set(left, new Set());
             }
 
-            componentsMap.get(l).add(comp);
+            componentsMap.get(left).add(component);
 
-            if (!componentsMap.has(comp)) {
-                componentsMap.set(comp, new Set());
+            if (!componentsMap.has(component)) {
+                componentsMap.set(component, new Set());
             }
 
-            componentsMap.get(comp).add(l);
+            componentsMap.get(component).add(left);
         }
     }
 
