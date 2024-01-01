@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const wordToDigit = {
     'one': 'o1e',
-    'two': 't2w',
+    'two': 't2o',
     'three': 'th3ee',
     'four': 'f4ur',
     'five': 'f5ve',
