@@ -31,7 +31,7 @@ const process = () => {
         locations.push(seedRangeMapper([[seed, seed]]));
     });
 
-    console.log('Min location (part 1): ', Math.min(...locations));
+    console.log('Min location (part 1):', Math.min(...locations));
 
     // part 2
     let seedRanges = [];
@@ -46,7 +46,7 @@ const process = () => {
         seedRangesLocations.push(seedRangeMapper([seedRange]));
     });
 
-    console.log('Min location (part 2): ', Math.min(...seedRangesLocations));
+    console.log('Min location (part 2):', Math.min(...seedRangesLocations));
 
 
 };
